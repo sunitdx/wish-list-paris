@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Set the Requester to the currently logged in user for new Wish item records. User can change the field value.</description>
+        <field>sys_created_on</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>Wish Item Set Requester</name>
+        <order/>
+        <script><![CDATA[function onLoad() {
+   //Type appropriate comment here, and begin script below
+   
+	if(g_form.isNewRecord()){
+		g_form.setValue('requester',g_user.userID);
+	}
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-28 20:22:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f8ef5bd9072b1410ae15f8ed7c1ed038</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Wish Item Set Requester</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Wish List" source="x_7647_wish_list">fd05931507e71410ae15f8ed7c1ed0b0</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Wish List">fd05931507e71410ae15f8ed7c1ed0b0</sys_scope>
+        <sys_update_name>sys_script_client_f8ef5bd9072b1410ae15f8ed7c1ed038</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-28 20:22:31</sys_updated_on>
+        <table>x_7647_wish_list_wish_item</table>
+        <type>onLoad</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
